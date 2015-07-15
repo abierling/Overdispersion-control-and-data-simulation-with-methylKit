@@ -2,9 +2,6 @@
 
 Experimental data (work in progress)
 
-Analysis methods: GLM (logistic model) to discern between treatment and covariate effect. 
-Overdispersion control.
-
 Multiple new features were integrated into the methylKit R-package: The ability to take into account covariates and overdispersion when calculating differential methylation and the possibility to simulate methylation data for testing and demonstration purposes.
 
 The first new feature - or, more precisely, the first two features - aim to  improve the sensitivity of the detection of differentially methylated sites by canceling out sites where the difference is either the result of a covariate and not the primary treatment as well as those sites where differences occur as a result of statistical overdispersion.
@@ -13,9 +10,12 @@ Covariates must be supplied by the user and theoretically could encompass metada
 
 This is achieved using a GLM (more precisely, a logistic model): A model ist constructed with the covariates as well as the treatment information as model covariates, which is then used to calculate ...
 
+
+
 Data Simulation methods: Binomial distribution simulates background methylation. 
 Betabinomial distribution maps this to actual percentages.
 Logistic function to simulate influence of numeric covariate (i.e. age) on methylation percentages for individual CpG sites.
+  
   
   
   
