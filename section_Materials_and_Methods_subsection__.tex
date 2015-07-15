@@ -1,8 +1,10 @@
 \section{Materials and Methods}
 \subsection{Experimental data}
+
 (work in progress)
 
 \subsection{Covariates and Overdispersion}
+
 Multiple new features were integrated into the methylKit R-package: The ability to take into account covariates and overdispersion when calculating differential methylation and the possibility to simulate methylation data for testing and demonstration purposes.
 
 The first new feature - or, more precisely, the first two features - aim to  improve the sensitivity of the detection of differentially methylated sites by canceling out sites where the difference is either the result of a covariate and not the primary treatment as well as those sites where differences occur as a result of statistical overdispersion.
@@ -12,6 +14,7 @@ Covariates must be supplied by the user and theoretically could encompass metada
 This is achieved using a GLM (more precisely, a logistic model): A model is constructed with the covariates as well as the treatment information as model covariates, which is then used to calculate ...\\
 
 \subsection{Data Simulation}
+
 The second new feature that was integrated into methylKit is the possibility to simulate methylation data.A Binomial distribution is used to model the background methylation values for each site. The same background value is used for all samples.
 
 Those fractional background values are then mapped to actual methylation counts. This happens by drawing the counts for each site from a betabinomial distribution that uses the binomial background values as the probability.
@@ -24,6 +27,7 @@ Furthermore, the user is able to supply a numeric covariate for the data (e.g. t
 \[f(x) = \frac{e^{(\beta_{0} + \beta_{1}x)}}{k+e^{(\beta_{0} + \beta_{1}x)}}\]
 
 $x$ is the covariate, while $\beta_{0}$, $\beta_{1}$ and $k$ determine the shape and slope of the logistic curve.
+  
   
   
   
