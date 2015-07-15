@@ -17,10 +17,9 @@ Those fractional background values are then mapped to actual methylation counts.
 All those steps take place for treated and control samples alike and the background probabilities are the same for all samples.
 The effect of a treatment is added into the treated samples by increasing the background probabilities for a user-specified percentage of the sites. The increase of the background probabilities is also user-specified and can be either a fixed value or a range of percentages, in which case the value for each specific site is chosen randomly.\\
 Furthermore, the user is able to supply a numeric covariate for the data (e.g. the age of the samples), which similarly to the treatment effect, changes the background probabilities for certain sites via the logistic function:
-
 \[f(x) = \frac{e^{(\beta_{0} + \beta_{1}x)}}{k+e^{(\beta_{0} + \beta_{1}x)}}\]
-
 $x$ is the covariate, while $\beta_{0}$, $\beta_{1}$ and $k$ determine the shape and slope of the logistic curve.
+  
   
   
   
