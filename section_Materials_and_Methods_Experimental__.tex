@@ -4,6 +4,7 @@ Experimental data (work in progress)
 
 Multiple new features were integrated into the methylKit R-package: The ability to take into account covariates and overdispersion when calculating differential methylation and the possibility to simulate methylation data for testing and demonstration purposes.
 
+\\
 The first new feature - or, more precisely, the first two features - aim to  improve the sensitivity of the detection of differentially methylated sites by canceling out sites where the difference is either the result of a covariate and not the primary treatment as well as those sites where differences occur as a result of statistical overdispersion.
 
 Covariates must be supplied by the user and theoretically could encompass metadata such as age, sex, etc. which are generally thought to influence DNA methylation quite significantly \cite{24561809}. It follows, that the ability to estimate / eliminate their influence on the calculation of differentially methylated sites (caused by a certain treatment) would be of great value.
@@ -24,4 +25,5 @@ Furthermore, the user is able to supply a numeric covariate for the data (e.g. t
 $f(x) = \frac{e^{(\beta_{0} + \beta_{1}x)}}{k+e^{(\beta_{0} + \beta_{1}x)}}$
 
 $x$ is the covariate, while $\beta_{0}$, $\beta_{1}$ and $k$ determine the shape and slope of the logistic curve.
+  
   
