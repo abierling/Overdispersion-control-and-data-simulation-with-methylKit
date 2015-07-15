@@ -9,7 +9,7 @@ Multiple new features were integrated into the methylKit R-package: The ability 
 
 The first new feature - or, more precisely, the first two features - aim to  improve the sensitivity of the detection of differentially methylated sites by canceling out sites where the difference is either the result of a covariate and not the primary treatment as well as those sites where differences occur as a result of statistical overdispersion.
 
-Covariates must be supplied by the user and theoretically could encompass metadata such as age, sex, etc. which are generally thought to influence DNA methylation quite significantly [QUOTE] . It follows, that the ability to estimate / eliminiate their influence on the calculation of differentially methylated sites (caused by a certain treatment) would be of great value.
+Covariates must be supplied by the user and theoretically could encompass metadata such as age, sex, etc. which are generally thought to influence DNA methylation quite significantly \cite{24561809}. It follows, that the ability to estimate / eliminiate their influence on the calculation of differentially methylated sites (caused by a certain treatment) would be of great value.
 
 This is achieved using a GLM (more precisely, a logistic model): A model ist constructed with the covariates as well as the treatment information as model covariates, which is then used to calculate ...
 
@@ -17,5 +17,6 @@ This is achieved using a GLM (more precisely, a logistic model): A model ist con
 Data Simulation methods: Binomial distribution simulates background methylation. 
 Betabinomial distribution maps this to actual percentages.
 Logistic function to simulate influence of numeric covariate (i.e. age) on methylation percentages for individual CpG sites.
+  
   
   
