@@ -4,7 +4,6 @@
 (work in progress)
 
 \subsection{Covariates and Overdispersion}
-
 Multiple new features were integrated into the methylKit R-package: The ability to take into account covariates and overdispersion when calculating differential methylation and the possibility to simulate methylation data for testing and demonstration purposes.\\
 The first new feature - or, more precisely, the first two features - aim to  improve the sensitivity of the detection of differentially methylated sites by canceling out sites where the difference is either the result of a covariate and not the primary treatment as well as those sites where differences occur as a result of statistical overdispersion.\\
 Covariates must be supplied by the user and theoretically could encompass metadata such as age, sex, etc. which are generally thought to influence DNA methylation quite significantly \cite{24561809}. It follows, that the ability to estimate / eliminate their influence on the calculation of differentially methylated sites (caused by a certain treatment) would be of great value.\\
@@ -15,7 +14,6 @@ However, before those deviance values are tested, they are corrected for overdis
 Where $r_{i}$ are the pearson residuals, $w$ is the number of counts for the current site and $nprm$ is the number of fitted parameters from the treatment-model.
 
 \subsection{Data Simulation}
-
 The second new feature that was integrated into methylKit is the possibility to simulate methylation data. A Binomial distribution is used to model the background methylation values for each site. The same background value is used for all samples.\\
 Those fractional background values are then mapped to actual methylation counts. This happens by drawing the counts for each site from a betabinomial distribution that uses the binomial background values as the probability.\\
 All those steps take place for treated and control samples alike and the background probabilities are the same for all samples.
@@ -23,21 +21,3 @@ The effect of a treatment is added into the treated samples by increasing the ba
 Furthermore, the user is able to supply a numeric covariate for the data (e.g. the age of the samples), which similarly to the treatment effect, changes the background probabilities for certain sites via the logistic function:
 \[f(x) = \frac{e^{(\beta_{0} + \beta_{1}x)}}{k+e^{(\beta_{0} + \beta_{1}x)}}\]
 Where $x$ is the covariate, while $\beta_{0}$, $\beta_{1}$ and $k$ determine the shape and slope of the logistic curve.
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
