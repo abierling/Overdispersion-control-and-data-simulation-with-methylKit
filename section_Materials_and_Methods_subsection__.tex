@@ -11,8 +11,8 @@ Covariates must be supplied by the user and theoretically could encompass metada
 This is achieved using two GLMs (more precisely, logistic models):One model is constructed with the treatment as well as the covariates, while a second model is built around only the covariates (if there are other present covariates at all).\\
 If there are covariates present, then the difference of deviances of the covariate-model and the treatment-model are the basis for the F- or Chisq-test.If there are no covariates present, then the difference of the null.deviance and the deviance from the treatment-model are used.\\
 However, before those deviance values are tested, they are corrected for overdispersion, if the user desires this. The basic overdispersion correction works through calculating the pearson residuals of the fitted values from the treatment-model and then calculating from those residuals an overall correction factor phi:
-\[phi = \frac{\sum{residuals^2}}{(w - nprm)}\]
-Where $residuals$ are the pearson residuals, $w$ is the number of counts for the current site and $nprm$ is the number of fitted parameters from the treatment-model.
+\[phi = \frac{\sum{r_{i}^2}}{(w - nprm)}\]
+Where $r_{i}$ are the pearson residuals, $w$ is the number of counts for the current site and $nprm$ is the number of fitted parameters from the treatment-model.
 
 \subsection{Data Simulation}
 
@@ -23,6 +23,7 @@ The effect of a treatment is added into the treated samples by increasing the ba
 Furthermore, the user is able to supply a numeric covariate for the data (e.g. the age of the samples), which similarly to the treatment effect, changes the background probabilities for certain sites via the logistic function:
 \[f(x) = \frac{e^{(\beta_{0} + \beta_{1}x)}}{k+e^{(\beta_{0} + \beta_{1}x)}}\]
 Where $x$ is the covariate, while $\beta_{0}$, $\beta_{1}$ and $k$ determine the shape and slope of the logistic curve.
+  
   
   
   
