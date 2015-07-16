@@ -1,5 +1,6 @@
 Draft.tex
 section_Materials_and_Methods_subsection__.tex
 section_Results_Results_of_simulated__.tex
+figures/Sim_perc15c30_70/Sim_perc15c30_70.png
 section_Analysis_Are_there_differences__.tex
 section_Discussion_Try_to_explain__.tex
