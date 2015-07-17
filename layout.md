@@ -1,4 +1,3 @@
-Draft.tex
 section_Introduction_Briefly_explain_DNA__.tex
 section_Materials_and_Methods_subsection__.tex
 section_Results_subsection_Data_simulation__.tex
